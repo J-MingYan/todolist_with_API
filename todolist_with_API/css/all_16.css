@@ -1,0 +1,92 @@
+body
+{
+  font-weight: bold;
+  min-height: 100vh;
+  background: linear-gradient(0deg,#d8feff,#fdbb2d);
+}
+.checkbox {
+  position: relative;
+  -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 100%;
+  display: block;
+  padding-left: 44px;
+  cursor: pointer;
+}
+/* .checkbox span {
+  display: block;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+  line-height: 1.5;
+} */
+@media (max-width: 575px) {
+  .checkbox span {
+    padding-right: 1rem;
+  }
+}
+.checkbox input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+/*框框樣式*/
+.checkbox span::before {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%) scale(1);
+          transform: translateY(-50%) scale(1);
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  pointer-events: none;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+/* 打勾樣式 */
+.checkbox span::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 1%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  height: 20px;
+  width: 0.8rem;
+  border-radius: 1px;
+  border-bottom: 3px solid #ffd370;
+  border-right: 3px solid #ffd370;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+/*畫線和文字顏色*/
+.checkbox input:checked ~ span {
+  color: #9f9a91;
+  text-decoration: line-through;
+}
+.checkbox input:checked ~ span::before {
+  border-color: transparent;
+  -webkit-transform: translateY(-50%) scale(0);
+          transform: translateY(-50%) scale(0);
+}
+.checkbox input:checked ~ span::after {
+  opacity: 1;
+}
+.tab
+{
+  color: #fdbb2d !important;
+  border-bottom: 5px solid #fdbb2d;
+  transition: all .3s;
+}
