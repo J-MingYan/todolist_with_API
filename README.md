@@ -8,7 +8,7 @@
 ## 使用插件
 * [axios](https://github.com/axios/axios)
 
-# 功能 <h2>
+## 功能
 ## 登入頁面功能
 * 表單內容審核
 * 發送API登入請求
