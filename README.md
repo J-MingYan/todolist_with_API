@@ -7,6 +7,7 @@
 * JavaScript
 ## 使用插件
 * [axios](https://github.com/axios/axios)
+* [sweet alert](https://sweetalert2.github.io/#download)
 
 ## 功能
 ## 登入頁面功能
